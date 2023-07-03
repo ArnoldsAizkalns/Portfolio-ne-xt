@@ -30,8 +30,8 @@
 		"**/*.ts",
 		"**/*.tsx",
 		".next/types/**/*.ts",
-		"app/cards/Explore.js",
-		"app/cards/ExploreCard.js"
+		"app/portfolio/secondSection/cards/Explore.js",
+		"app/portfolio/secondSection/cards/ExploreCard.js"
 	],
 	"exclude": ["node_modules"]
 }

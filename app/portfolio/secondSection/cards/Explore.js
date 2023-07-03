@@ -2,8 +2,8 @@
 
 import { motion } from 'framer-motion'
 import { useState } from 'react'
-import styles from '../../styles.js'
-import { TypingText } from '../../util/motion'
+import styles from '/styles'
+import { TypingText } from '/util/motion.js'
 
 import ExploreCard from './ExploreCard'
 
@@ -22,19 +22,19 @@ const Explore = () => {
 
 	const exploreWorlds = [
 		{
-			id: 'world-1',
-			imgUrl: '/assets/secondSection/paint.jpg',
-			title: 'Freedom of thought',
+			id: 'world-3',
+			imgUrl: '/assets/secondSection/figure.jpg',
+			title: 'Clarity in details',
 		},
 		{
-			id: 'world-2',
+			id: 'world-1',
 			imgUrl: '/assets/secondSection/colors.jpg',
 			title: 'Beauty of differences',
 		},
 		{
-			id: 'world-3',
-			imgUrl: '/assets/secondSection/figure.jpg',
-			title: 'Clarity in details',
+			id: 'world-2',
+			imgUrl: '/assets/secondSection/paint.jpg',
+			title: 'Freedom of thought',
 		},
 		{
 			id: 'world-4',
@@ -51,7 +51,7 @@ const Explore = () => {
 				viewport={{ once: false, amount: 0.25 }}
 				className={`${styles.innerWidth} mx-auto flex flex-col`}
 			>
-				<div className='flex lg:flex-row font-display flex-col min-h-[70vh] gap-5'>
+				<div className='flex flex-col gap-5 lg:flex-row min-h-[70vh] lg:min-h-[100%]'>
 					{exploreWorlds.map((world, index) => (
 						<ExploreCard
 							key={world.id}
@@ -59,11 +59,11 @@ const Explore = () => {
 							index={index}
 							active={active}
 							handleClick={setActive}
-							className='font-display'
+							className='text-md'
 						/>
 					))}
 				</div>
-				<div className='max-w-3xl pt-4 mx-auto text-sm uppercase'>
+				<div className='max-w-3xl pt-6 pr-20 mx-2 text-sm uppercase md:mx-auto'>
 					<TypingText
 						title={[
 							'Unlock the true potential',

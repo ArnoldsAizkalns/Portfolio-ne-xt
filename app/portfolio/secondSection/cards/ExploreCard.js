@@ -2,8 +2,8 @@
 
 import { motion } from 'framer-motion'
 
-import styles from '../../styles.js'
-import { fadeIn } from '../../util/motion'
+import styles from '../../../../styles.js'
+import { fadeIn } from '../../../../util/motion.js'
 
 const ExploreCard = ({ id, imgUrl, title, index, active, handleClick }) => (
 	<motion.div
@@ -19,15 +19,15 @@ const ExploreCard = ({ id, imgUrl, title, index, active, handleClick }) => (
 			className='absolute object-cover w-full h-full '
 		/>
 		{active !== id ? (
-			<h3 className='font-semibold sm:text-[26px] text-[18px] text-white absolute z-0 lg:bottom-20 lg:rotate-[-90deg] lg:origin-[0,0]'>
+			<h3 className='font-normal sm:text-[26px] text-[18px] text-white absolute z-0 lg:bottom-20 lg:rotate-[-90deg] lg:origin-[0,0]'>
 				{title}
 			</h3>
 		) : (
-			<div className='absolute bottom-0 p-8 flex justify-start w-full ease-in-out hover:scale-110 flex-col bg-[rgba(100,91,91,0.5)] '>
+			<div className='absolute bottom-0 p-8 flex justify-start w-full  flex-col bg-[rgba(117,117,117,0.69)] '>
 				<div
 					className={`${styles.flexCenter} h-[60px] w-[60px]  rounded-[24px]  mb-[16px]`}
 				></div>
-				<h2 className='mt-[24px] absolute top-0 font-semibold sm:text-[32px] text-[24px] text-white'>
+				<h2 className='mt-[24px]  absolute top-0 font-normal sm:text-[32px] text-[24px] text-white'>
 					{title}
 				</h2>
 			</div>

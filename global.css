@@ -118,3 +118,13 @@
 	background: #65c4fa;
 	filter: blur(150px);
 }
+.project1 {
+	position: fixed;
+	left: -100%; /* Скрываем элемент за левой границей экрана */
+	top: 50%;
+	transform: translateY(-50%);
+	transition: left 0.3s ease-out; /* Добавляем плавный переход */
+}
+.project1.active {
+	left: 0; /* Показываем элемент с левой стороны экрана */
+}
